@@ -2,38 +2,36 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Приглашение на свадьбу</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="container">
+    <h1>💍 Наше свадебное приглашение</h1>
+    <p>Пожалуйста, подтвердите своё присутствие:</p>
 
-<div class="container">
-  <h1>Приглашение на свадьбу</h1>
-  <p class="subtitle">Будем рады видеть вас в этот особенный день</p>
+    <form id="inviteForm">
+      <label for="names">Имена гостей:</label>
+      <input type="text" id="names" name="names" placeholder="Введите имена" required>
 
-  <form id="inviteForm">
-    <label>
-      Имена гостей
-      <input type="text" id="names" required placeholder="Введите имя">
-    </label>
+      <div class="radio-group">
+        <label><input type="radio" name="visit" value="Да" required> Приду</label>
+        <label><input type="radio" name="visit" value="Нет"> Не приду</label>
+      </div>
 
-    <div class="radio-group">
-      <p>Вы придёте?</p>
-      <label>
-        <input type="radio" name="visit" value="Да" required> Да
-      </label>
-      <label>
-        <input type="radio" name="visit" value="Нет"> Нет
-      </label>
-    </div>
+      <button type="submit">Отправить</button>
+    </form>
 
-    <button type="submit">Отправить ответ</button>
-  </form>
+    <p id="status"></p>
+  </div>
 
-  <p id="status"></p>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

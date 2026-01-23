@@ -1,62 +1,98 @@
+/* Основные стили */
 body {
-  font-family: Georgia, serif;
-  background: #f7f5f2;
+  font-family: 'Roboto', sans-serif;
+  background: #fff8f0;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  max-width: 400px;
-  margin: 80px auto;
-  padding: 30px;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
   background: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
   text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #ff4b4b;
 }
 
-.subtitle {
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
   text-align: center;
-  margin-bottom: 30px;
-  font-style: italic;
 }
 
-label {
-  display: block;
-  margin-bottom: 15px;
+/* Форма */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 .radio-group {
-  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+.radio-group label {
+  cursor: pointer;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background: #333;
+  padding: 12px;
+  font-size: 1rem;
+  background: #ff6b6b;
   color: #fff;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 1px;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background: #555;
+  background: #ff4b4b;
 }
 
 #status {
   margin-top: 15px;
   text-align: center;
+  font-weight: bold;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input[type="text"], button {
+    font-size: 1rem;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 }
