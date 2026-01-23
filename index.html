@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Приглашение на свадьбу</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h1>Приглашение на свадьбу</h1>
+  <p class="subtitle">Будем рады видеть вас в этот особенный день</p>
+
+  <form id="inviteForm">
+    <label>
+      Имена гостей
+      <input type="text" id="names" required placeholder="Введите имя">
+    </label>
+
+    <div class="radio-group">
+      <p>Вы придёте?</p>
+      <label>
+        <input type="radio" name="visit" value="Да" required> Да
+      </label>
+      <label>
+        <input type="radio" name="visit" value="Нет"> Нет
+      </label>
+    </div>
+
+    <button type="submit">Отправить ответ</button>
+  </form>
+
+  <p id="status"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
