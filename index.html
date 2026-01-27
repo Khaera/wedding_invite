@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Приглашение на свадьбу</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Антон & Вероника</title>
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>💍 Приглашение на свадьбу</h1>
-    <p>Будем рады видеть вас в этот особенный день</p>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Антон & Вероника</h1>
+      <p class="subtitle">Приглашаем вас разделить с нами этот особенный день</p>
+      <p class="date">11 апреля 2026 · 16:20 · Суббота</p>
+
+      <!-- Timer -->
+      <div class="timer" id="timer">
+        <div><span id="days">0</span><small>дней</small></div>
+        <div><span id="hours">0</span><small>часов</small></div>
+        <div><span id="minutes">0</span><small>минут</small></div>
+        <div><span id="seconds">0</span><small>секунд</small></div>
+      </div>
+
+      <button class="main-btn top-btn">Ответить на приглашение</button>
+    </section>
+
+    <!-- Photo -->
+    <section class="photo-section">
+      <!-- Просто замени src на своё фото -->
+      <img src="we_are.JPG" alt="Наше фото">
+    </section>
+
+    <!-- Text -->
+    <section class="text-section">
+      <p>
+        <b>Будем рады видеть вас на нашей свадьбе 11.04.2026 года в 16:20.</b>
+      </p>
+      <p>
+        Роспись будет проходить в Дворце Бракосочетания №2 города Санкт-Петербурга,
+        расположенного на Фурштатской улице, 52. 
+        <br>После регистрации брака пройдем в банкетный зал
+        для проведения банкета, который находится в 5 минутах
+        ходьбы пешком по адресу: гор. Санкт-Петербург, Кирочная улица, 36Б
+      </p>
+      <p>
+        Просим вас явиться в Дворец Бракосочетания за 10 минут до проведения регистрации.
+      </p>
+      <p class="accent">
+        С собой взять хорошее настроение! 🙂
+      </p>
+      <!-- Дублируем кнопку для мобильных -->
+      <button class="main-btn bottom-btn">Ответить на приглашение</button>
+    </section>
+
+  </main>
+
+  <!-- Popup overlay -->
+  <div class="popup-overlay" id="popup">
+  <div class="popup">
+    <button class="popup-close" id="closePopup">×</button>
+
+    <h2>💍 Ответ на приглашение</h2>
 
     <form id="inviteForm">
-      <label for="names">Имена гостей:</label>
-      <input type="text" id="names" name="names" placeholder="Введите имена" required>
+      <label class="form-item" for="names">Имена гостей:</label>
+      <input class="form-item" type="text" id="names" placeholder="Введите имена" required>
 
-      <div class="radio-group">
+      <div class="radio-group form-item">
         <label><input type="radio" name="visit" value="Да" required> Приду</label>
         <label><input type="radio" name="visit" value="Нет"> Не приду</label>
       </div>
 
-      <button type="submit">Отправить</button>
+      <button class="form-item" type="submit">Отправить</button>
     </form>
-
-    <p id="status"></p>
+    
+<p id="status" class="form-item"></p>
   </div>
-
-  <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
