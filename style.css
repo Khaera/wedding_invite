@@ -5,10 +5,20 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: #faf9f7;
-  color: #333;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("wedding-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #3b3b3b;
 }
+
 
 .container {
   max-width: 900px;
@@ -28,12 +38,15 @@ body {
   margin-bottom: 15px;
 }
 
+.photo-section {
+  border-radius: 28px;
+}
+
 .hero-photo {
   width: 100%;
   height: auto;
   max-height: 70vh;        /* БОЛЬШЕ, чем было */
   object-fit: contain;    /* не режем */
-  border-radius: 20px;
   margin: 20px auto;
   display: block;
 }
